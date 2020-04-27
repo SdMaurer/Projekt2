@@ -157,7 +157,7 @@ def save_model(model, image_datasets, learning_rate, batch_size, epochs, criteri
               
                   'learning_rate': 0.001,
                   
-                # ' classifier' : model.classifier,
+                  ' classifier' : model.classifier,
 
                   'epochs': 5,
 
@@ -188,7 +188,7 @@ def load_model(filepath):
     if checkpoint['arch'] == 'vgg16':
         model=models.vgg16(pretrained=True)
       
-   # model.classifier =checkpoint['classifier']
+    model.classifier =checkpoint['classifier']
     model.load_state_dict(checkpoint['state_dict'])
     #model.class_to_idx = checkpoint['class_to_idx']
     
