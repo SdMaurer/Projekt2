@@ -60,10 +60,10 @@ if model != 0:
     optimizer = optim.Adam(model.classifier.parameters(), learning_rate) 
 
     # Train the model with validation
-    nnModel.train_model(model, dataloaders, validloaders,testloaders, criterion, optimizer, epochs, gpu)
+    trained_model=nnModel.train_model(model, dataloaders, validloaders,testloaders, criterion, optimizer, epochs, gpu)
 
     # Save the model
-    nnModel.save_model(model, image_datasets, learning_rate, batch_size, epochs, criterion, optimizer, hidden_units, arch)
+    nnModel.save_model(trained_model, image_datasets, learning_rate, batch_size, epochs, criterion, optimizer, hidden_units, arch)
 
 
 
