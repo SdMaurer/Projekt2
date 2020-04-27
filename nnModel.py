@@ -135,6 +135,7 @@ def train_model(model, dataloaders, validloaders, testloaders, criterion, optimi
     running_loss = 0
     model.train()
     print("\nDone training the model \n")
+    return model 
         
         
         
